@@ -29,6 +29,7 @@ Requirements
 Steppermotor_precise requires both the pigpio daemon and the pigpio package for python to be installed.
 See [here](http://abyz.me.uk/rpi/pigpio/download.html) for installation instructions.
 Armv6 like the early Raspberry Pi and Pi Zero may require compiling from source (git).
+On some linux distro's a package may be available from the package manager.
 
 Note: Before running steppermotor_precise the pigpio daemon must be started with
 
