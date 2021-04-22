@@ -1,7 +1,8 @@
 Description
 -----------
 Provides the classes BasicDriver, DRV8825, AutoDRV8825, A4988and AutoA4988
-to interface with the respective driver chip by means of PIGPIO.
+to interface with the respective driver chip by means of the python [PIGPIO package](https://pypi.org/project/pigpio/).
+It requires the [pigpiod daemon](http://abyz.me.uk/rpi/pigpio/pigpiod.html) to be installed and running.
 
 Intended users: Developers.
 
