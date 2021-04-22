@@ -19,3 +19,16 @@ It provides the pulse() function to simply output pulses to the configured
 driver chip.
 
 See testDRV8825.py and testA4988.py for example code.
+
+
+Installation
+------------
+To install this package from github, you need to clone the repository:
+
+git clone https://github.com/jbaans/python-rpi-steppermotor-precise
+
+Then run the setup.py file from the cloned directory:
+
+sudo python setup.py install
+
+
