@@ -52,10 +52,10 @@ Set PWM frequency (Hz) for stepper driver to run at:
 
     frequency = 1000
 
-    try:
-
 Create a motor object:
 
+    try:
+    
         motor = AutoDRV8825(GPIOS, frequency)
         
 Enable the motor and run some steps (this will accelerate with microsteps):
@@ -65,10 +65,10 @@ Enable the motor and run some steps (this will accelerate with microsteps):
         madesteps = motor.auto_step(steps)
 
         motor.disable()
-        
-    finally:
     
 Clean up the motor object:
+        
+    finally:
     
         if motor:
         
