@@ -40,45 +40,38 @@ Usage
 Make sure you set the GPIO pin numbers using the GPIOS {} dict, for example:
 
 `GPIOS = {
-
     "enable":23,
-    
     "step":24,
-    
     "direction":25,
-    
     "m0":22,
-    
     "m1":17,
-    
     "m2":4
-    
 }`
 
 Set PWM frequency (Hz) for stepper driver to run at:
 
-`frequency = 1000
+    frequency = 1000
 
-try:`
+    try:
 
 Create a motor object:
 
-        `motor = AutoDRV8825(GPIOS, frequency)`
+        motor = AutoDRV8825(GPIOS, frequency)
         
 Enable the motor and run some steps (this will accelerate with microsteps):
         
-        `motor.enable()
+        motor.enable()
         
         madesteps = motor.auto_step(steps)
 
         motor.disable()
         
-    finally:`
+    finally:
     
 Clean up the motor object:
     
-        `if motor:
+        if motor:
         
-            motor.close()'
+            motor.close()
 
 
