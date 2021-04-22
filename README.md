@@ -2,7 +2,6 @@ Description
 -----------
 Provides the classes BasicDriver, DRV8825, AutoDRV8825, A4988and AutoA4988
 to interface with the respective driver chip by means of the python [pigpio package](https://pypi.org/project/pigpio/).
-It requires the [pigpiod daemon](http://abyz.me.uk/rpi/pigpio/pigpiod.html) to be installed and running. For Arch Arm Linux the pigpio daemon is available [here](https://aur.archlinux.org/packages/pigpio/). On Raspbian the pigpio daemon is available through the package manager with `sudo apt-get install pigpio`.
 
 Intended users: Developers.
 
@@ -24,6 +23,16 @@ It provides the pulse() function to simply output pulses to the configured
 driver chip.
 
 See testDRV8825.py and testA4988.py for example code.
+
+Requirements
+------------
+Steppermotor_precise requires both the pigpio daemon and the pigpio package for python to be installed.
+See [here](http://abyz.me.uk/rpi/pigpio/download.html) for installation instructions.
+Armv6 like the early Raspberry Pi and Pi Zero may require compiling from source (git).
+
+Note: Before running steppermotor_precise the pigpio daemon must be started with
+
+`sudo pigpiod`
 
 
 Installation
