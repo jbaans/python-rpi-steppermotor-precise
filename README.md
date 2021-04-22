@@ -3,7 +3,9 @@ Description
 Provides the classes BasicDriver, DRV8825, AutoDRV8825, A4988and AutoA4988
 to interface with the respective driver chip by means of PIGPIO.
 
-Its provides an interface for stepper motor drivers connected to a 
+Intended users: Developers.
+
+This package provides an interface for stepper motor drivers connected to 
 Raspberry Pi GPIO and uses the PIGPIO library to provide accurate PWM 
 pulses to drive the (micro) steps.
 
@@ -32,5 +34,51 @@ To install this package from github, you need to clone the repository:
 Then run the setup.py file from the cloned directory:
 
 `sudo python setup.py install`
+
+Usage
+-------------
+Make sure you set the GPIO pin numbers using the GPIOS {} dict, for example:
+
+`GPIOS = {
+
+    "enable":23,
+    
+    "step":24,
+    
+    "direction":25,
+    
+    "m0":22,
+    
+    "m1":17,
+    
+    "m2":4
+    
+}`
+
+Set PWM frequency (Hz) for stepper driver to run at:
+
+`frequency = 1000
+
+try:`
+
+Create a motor object:
+
+        `motor = AutoDRV8825(GPIOS, frequency)`
+        
+Enable the motor and run some steps (this will accelerate with microsteps):
+        
+        `motor.enable()
+        
+        madesteps = motor.auto_step(steps)
+
+        motor.disable()
+        
+    finally:`
+    
+Clean up the motor object:
+    
+        `if motor:
+        
+            motor.close()'
 
 
