@@ -1,3 +1,5 @@
+Description
+-----------
 Provides the classes BasicDriver, DRV8825, AutoDRV8825, A4988and AutoA4988
 to interface with the respective driver chip by means of PIGPIO.
 
@@ -25,10 +27,10 @@ Installation
 ------------
 To install this package from github, you need to clone the repository:
 
-git clone https://github.com/jbaans/python-rpi-steppermotor-precise
+> git clone https://github.com/jbaans/python-rpi-steppermotor-precise
 
 Then run the setup.py file from the cloned directory:
 
-sudo python setup.py install
+> sudo python setup.py install
 
 
