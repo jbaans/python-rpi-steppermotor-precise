@@ -1,8 +1,8 @@
 Description
 -----------
 Provides the classes BasicDriver, DRV8825, AutoDRV8825, A4988and AutoA4988
-to interface with the respective driver chip by means of the python [PIGPIO package](https://pypi.org/project/pigpio/).
-It requires the [pigpiod daemon](http://abyz.me.uk/rpi/pigpio/pigpiod.html) to be installed and running.
+to interface with the respective driver chip by means of the python [pigpio package](https://pypi.org/project/pigpio/).
+It requires the [pigpiod daemon](http://abyz.me.uk/rpi/pigpio/pigpiod.html) to be installed and running. For Arch Arm Linux the pigpio daemon is available [here](https://aur.archlinux.org/packages/pigpio/). On Raspbian the pigpio daemon is available through the package manager with `sudo apt-get install pigpio`.
 
 Intended users: Developers.
 
