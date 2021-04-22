@@ -37,7 +37,8 @@ Then run the setup.py file from the cloned directory:
 
 Usage
 -------------
-Make sure you set the GPIO pin numbers using the GPIOS {} dict, for example:
+Make sure you set the GPIO pin numbers using the GPIOS {} dict. Refer to Raspberry Pi 
+and DRV8825/A4988 datasheets for numbering details. For example:
 
 `GPIOS = {
     "enable":23,
