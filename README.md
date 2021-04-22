@@ -27,10 +27,10 @@ Installation
 ------------
 To install this package from github, you need to clone the repository:
 
-> git clone https://github.com/jbaans/python-rpi-steppermotor-precise
+`git clone https://github.com/jbaans/python-rpi-steppermotor-precise`
 
 Then run the setup.py file from the cloned directory:
 
-> sudo python setup.py install
+`sudo python setup.py install`
 
 
