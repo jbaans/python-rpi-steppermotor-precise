@@ -120,8 +120,9 @@ class AutoDRV8825(DRV8825):
         _verbose(self, subtotal)
 
         remainder = steps - (2 * subtotal)
-        subtotal += _stationary(self, remainder)
-        _verbose(self, subtotal)
+        if remainder != 0:
+            subtotal += _stationary(self, remainder)
+            _verbose(self, subtotal)
 
         # decelerate with stepsizes reversed
         subtotal += _accelerate(self, accel_microsteps, reversed(stepsizes))
