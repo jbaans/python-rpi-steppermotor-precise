@@ -48,17 +48,21 @@ Then run the setup.py file from the cloned directory:
 
 Usage
 -------------
+Import the class:
+
+    from steppermotor_precise import AutoDRV8825
+
 Make sure you set the GPIO pin numbers using the GPIOS {} dict. Refer to Raspberry Pi 
 and DRV8825/A4988 datasheets for numbering details. For example:
 
-`GPIOS = {
-    "enable":23,
-    "step":24,
-    "direction":25,
-    "m0":22,
-    "m1":17,
-    "m2":4
-}`
+     GPIOS = {
+        "enable":23,
+        "step":24,
+        "direction":25,
+        "m0":22,
+        "m1":17,
+        "m2":4
+    }
 
 Set PWM frequency (Hz) for stepper driver to run at:
 
