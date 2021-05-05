@@ -165,7 +165,7 @@ class BasicDriver:
         print("Disabled motor.")
 
 
-    def pulse(self, pulses, frequency=None, dutycycle=None, direction=None):
+    def pulse(self, pulses, frequency=None, direction=None):
         """Output the specified number of pulses to the motor driver chip
         at the specified frequency, with the specified duty cycle and in
         the specified direction.
