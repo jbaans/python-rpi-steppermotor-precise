@@ -177,7 +177,6 @@ class BasicDriver:
         Args:
             pulses (int)): number of pulses to output to motor driver chip
             frequency (int, optional): PWM frequency (Hz). Defaults to None.
-            dutycycle (int, optional): PWM duty cycle 0..255 (for 0..100%). Defaults to None.
             direction (bool, optional): Rotation direction, True for clockwise. Defaults to None.
 
         Returns:
@@ -198,11 +197,11 @@ class BasicDriver:
             print("Sending " + str(pulses) + " pulses...")
 
         # dutycycle > 0 is required to output pulses, use default if none was provided
-        if not dutycycle:
-            dutycycle = self.DEFAULT_DUTYCYCLE
+        if not self.dutycycle:
+            self.dutycycle = self.DEFAULT_DUTYCYCLE
 
         # setting duty cycle will start/stop the PWM output for stepping
-        self.set_dutycycle(dutycycle)
+        self.set_dutycycle(self.dutycycle)
         time.sleep(waittime)
         self.set_dutycycle(0)
 
