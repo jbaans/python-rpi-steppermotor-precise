@@ -21,13 +21,13 @@ class BasicDriver:
     accurate PWM pulses to drive the (micro) steps.
     """
     WAIT_ENABLE = None      # seconds to stabilize after enable
-    DEFAULT_DUTYCYCLE = 123 # 0..255
+    DEFAULT_DUTYCYCLE = 127 # 0..255
     GPIOS = {}              # dict of GPIO description: GPIO pin
 
     # default settings:
     direction = True        # rotation direction
     frequency = 0           # PWM pulses per second
-    dutycycle = 0           # 0..255 for 0..100%
+    dutycycle = 0           # 0..255 for 0..100%. Start with 0 i.e. no pulses on output
     gpio = None             # pigpio object
     verbosity = None        # integer to set verbosity
 
@@ -132,13 +132,12 @@ class BasicDriver:
             print("Dutycycle is set to " + str(dutycycle))
 
 
-    def enable(self, frequency=None, dutycycle=None, direction=None):
-        """Enables motor driver chip by setting duty cycle nonzero.
+    def enable(self, frequency=None, direction=None):
+        """Enables motor driver chip to make it ready for stepping.
         Requires some time to settle, set by WAIT_ENABLE.
 
         Args:
             frequency (int, optional): PWM frequency (Hz). Defaults to None.
-            dutycycle (int, optional): PWM duty cycle 0..255 (for 0..100%). Defaults to None.
             direction (bool, optional): Rotation direction, True for clockwise. Defaults to None.
         """
         if frequency:
