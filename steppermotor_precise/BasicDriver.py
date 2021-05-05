@@ -20,7 +20,7 @@ class BasicDriver:
     connected to Raspberry Pi GPIO and uses the PIGPIO library to provide
     accurate PWM pulses to drive the (micro) steps.
     """
-    WAIT_ENABLE = None      # seconds to stabilize after enable
+    WAIT_ENABLE = 1         # seconds to stabilize after enable
     DEFAULT_DUTYCYCLE = 127 # 0..255
     GPIOS = {}              # dict of GPIO description: GPIO pin
 
